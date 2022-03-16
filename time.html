@@ -1,0 +1,18 @@
+<div 
+	style="    display: flex;
+       justify-content: center;
+	       align-items: center;
+	         font-size: 300px;
+	            height: 800px;" 
+	 id="t">
+</div>
+
+<script>
+	const o = (o) => { return o.toString().padStart(2,'0') }
+	const t = () => {
+		let dt = new Date();
+		document.getElementById("t").innerHTML = o(dt.getHours()) +":"+ o(dt.getMinutes()) + ":" + o(dt.getSeconds());
+		setTimeout(t, 1000);
+	}
+	t();
+</script>
